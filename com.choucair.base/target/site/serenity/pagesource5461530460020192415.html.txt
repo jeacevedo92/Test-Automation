@@ -1,0 +1,169 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<style>
+body,table {
+	font-family: lucida grande, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding:0px;
+	margin:0px;
+}
+.maindiv {
+	border: 1px solid #dcddda;
+	width: 900px;
+	margin: 0px auto;
+	background: url('https://img.zohostatic.com/iam/m4007.25/images/banner-bg.jpg'); 
+	border-radius: 2px;
+	text-align: justify;
+	margin-top: 5%;
+}
+.contentdiv {
+	padding: 27px 35px 30px;
+}
+.titlemsg {
+	border-bottom: 1px solid #c9c9c9;
+	font-size: 18px;
+	padding-bottom: 8px;
+}
+.msgcontenttle {
+	margin-top: 20px;
+	line-height: 20px;
+}
+.msgcontent {
+	margin-top: 10px;
+	line-height: 20px;
+}
+.btndiv {
+	clear: both;
+	margin-top: 35px;
+}
+.buttongreen, .buttonred {
+	color: #FFFFFF;
+	padding: 6px 20px;
+	text-decoration: none;
+}
+.buttongreen {
+	background-color: #6DA60A;
+	border: 1px solid #65990B;
+	font-size: 16px;
+}
+.buttonred {
+	background-color: #ff5722;
+	border: 1px solid #ff5722;
+	padding-bottom: 8px;
+	font-size: 13px;
+}
+.continuelink {
+	text-decoration: underline;
+	color: #0483C8;
+	margin-left: 20px;
+	font-size: 12px;
+	padding: 6px 0px 11px 0px;
+}
+.sessionbtndiv {
+	float: left;
+	margin-right: 20px;
+}
+.notesmaindiv {
+	line-height:22px;
+	margin-top:40px;
+}
+.notes { margin-top:8px; }
+.subnotes { padding-left:20px; }
+</style>
+
+<script src="https://js.zohostatic.com/iam/m4007.25/js/jquery-1.12.2.min.js" type="text/javascript"></script> 
+<script src="https://js.zohostatic.com/fcomponents/v2_36_4/topbar/js/ztopbar.js" type="text/javascript"></script> 
+<script src="https://js.zohostatic.com/fcomponents/v2_36_4/topbar/js/es_ES.js" type="text/javascript"></script> 
+<script src="https://js.zohostatic.com/iam/m4007.25/js/jquery.ztooltip.js" type="text/javascript"></script> 
+<script src="https://js.zohostatic.com/iam/m4007.25/js/common.js" type="text/javascript"></script> 
+
+<link href="https://css.zohostatic.com/fcomponents/v2_36_4/topbar/styles/ztopbar.css" rel="stylesheet" type="text/css" /> 
+<link href="https://css.zohostatic.com/iam/m4007.25/css/ui.ztooltip.css" type="text/css" rel="stylesheet" />
+<script>
+function redirect() {
+	window.location.href = '\x2Faccounts\x2Fannouncement\x2Fsessions\x2Dreminder\x2Fnext\x3Fstatus\x3D2\x26serviceurl\x3Dhttps\x253A\x252F\x252Fcrm.zoho.com\x26servicename\x3DZohoCRM';
+	return;
+}
+function showWarningBtn() {
+	document.getElementById('continue_skip').style.display='none';
+	document.getElementById('continue_url').style.display='';
+}
+function showManageSessions(){
+	window.open('\x2Fu\x2Fh\x23sessions\x2Fuseractivesessions');
+	redirect();
+}
+function showNextAnnouncement(){
+	window.location.href = '\x2Faccounts\x2Fannouncement\x2Fsessions\x2Dreminder\x2Fnext\x3Fstatus\x3D1\x26serviceurl\x3Dhttps\x253A\x252F\x252Fcrm.zoho.com\x26servicename\x3DZohoCRM';
+}
+
+
+$(document).ready(function(){
+	ztopbar ({
+		product: "accounts", //No I18N
+		homePageLink: "https\x3A\x2F\x2Faccounts.zoho.com", //No I18N
+		userInfo: {
+			name: "Jhon\x20Edinson\x20Acevedo", // Use IAM, User.getFullName() API method.
+			emailAddress: "jeacevedo92\x40gmail.com",
+			photo: "/file?fs=thumb&amp;ID=675375737", //NO OUTPUTENCODING //No I18N
+			userId: "675375737", //NO OUTPUTENCODING
+			appsInUse : [],
+			signOutURL: "URL:/logout" //No I18N
+		}
+		
+	});
+	$("#ztb-topband #ztb-profile&gt;a").remove();//no i18n
+	$("#ztb-myaccount").html("&amp;nbsp;");
+	$(document).ztooltip();
+	
+});
+</script>
+<title>Cuentas de Zoho</title>
+</head>
+<body>
+	<table width="100%" height="100%" align="center" cellpadding="0" cellspacing="0">
+		<tbody><tr><td valign="top" style="height:40px;"><div class="ztb-topband" id="ztb-topband"><div id="ztb-container"><div ztooltip="Aplicaciones de Zoho" class="ztooltip ztb-font-family" id="ztb-switch-menu"><div class="ztb-switch-to-square"><span></span><span class="two"></span><span></span><span></span><span class="five"></span><span></span><span></span><span class="eight"></span><span></span></div></div><a id="ztb-logo" href="https://accounts.zoho.com" style="cursor: pointer;"><span class="zlogos-22 zlogos-accounts"></span></a><div class="ztb-profile-container"><div type="profile" id="ztb-profile" class=" ztb-font-family"><div id="ztb-profile-header"><p id="ztb-user-name">Jhon Edinson Acevedo</p><p id="ztb-user-id">jeacevedo92@gmail.com</p><p id="ztb-zoho-uid"><label>User ID : 675375737</label><span id="ztb-zoho-uid-info" class="ztb-icon-group"></span></p><a id="ztb-myaccount" href="https://accounts.zoho.com/" target="_blank"> </a></div><img id="ztb-profile-image" src="/file?fs=thumb&amp;ID=675375737" /><div id="ztb-accountInfo"><span class="ztb-signout"><a class="ztb-anchor" id="ztb-signout" href="/logout">Cerrar sesión</a></span></div></div></div><div id="ztb-menu-container" class="ztb-font-family "><div class="ztb-item-container" id="ztb-textTypeCont"></div><div class="ztb-item-container"></div><div class="ztb-item-container"></div><div class="ztb-item-container"></div></div></div></div></td></tr>
+		<tr><td valign="top">
+			<div class="maindiv">
+				<div class="contentdiv">
+					<div class="titlemsg">¡ADVERTENCIA! ¡Hay demasiadas sesiones activas simultáneas!</div>
+					<div class="msgcontenttle">Hola <span style="font-weight:bold;">Jhon Edinson Acevedo</span></div>
+
+					<div class="msgcontent">Esto es para informarle que su cuenta tiene demasiadas sesiones activas abiertas. Debido a esto, es posible que su cuenta se bloquee automáticamente cuando alcance el límite máximo de sesiones activas simultáneas.</div>
+					<div class="msgcontent">Para evitar esto, haga clic en el botón "Administrar sesiones" abajo donde puede eliminar otras sesiones activas/no utilizadas.</div>
+
+					<div class="btndiv">
+						<div class="sessionbtndiv">
+							<a href="javascript:;" onclick="showManageSessions();" class="buttongreen" title="Administrar sesiones">Administrar sesiones</a>
+						</div>
+						<div>
+							<a id="continue_url" href="javascript:showNextAnnouncement()" class="buttonred" style="display:none;">Entiendo el riesgo, permítanme acceder al servicio</a>
+							<a id="continue_skip" href="javascript:showWarningBtn();" class="continuelink">Omitir</a>
+						</div>
+					</div>
+					<div class="notesmaindiv">
+						<div><b>Nota: </b>Para evitar llegar al límite máximo de sesiones,</div>
+						<div class="notes">
+							<div>Asegúrese de cerrar la sesión correctamente antes de salir del navegador. En caso</div>
+							<div class="subnotes">(a). Si cierra la ventana del navegador después de haber utilizado el servicio.</div>
+							<div class="subnotes">(b). Si ha establecido eliminar todas las cookies al salir del navegador.</div>
+						</div>
+						<div class="notes">- Si comparte una sola cuenta con varios usuarios, le recomendamos que use una cuenta separada para cada usuario y comparta los recursos necesarios en el nivel de la aplicación.</div>
+					</div>
+				</div>
+			</div>
+		</td></tr>
+		<tr><td valign="bottom">
+
+
+
+<div style="font-size:10px;text-align:center;padding:5px 0px;">
+
+
+    © 2018, <a href="http://www.zohocorp.com/" title="Zoho Corp." target="_blank" style="font-size:11px;color:#085ddc;">Zoho Corp.</a> Reservados todos los derechos.
+
+
+</div>
+
+</td></tr>
+	</tbody></table>
+
+<div id="ztb-user-id-tooltip" class="ztb-font-family"><span></span><span id="ztb-uid-tooltip-arrow"></span><div><p>This is your unique identification number in Zoho. </p><p>It will be handy for you to identify yourself to our customer support executive, say when you seek our assistance through our Toll Free number. </p></div></div><div id="ztb-apps" class="ztb-apps ztb-font-family "><div class="ztb-apps-grey"></div><div id="ztb-all-apps"><div class="ztb-allApps ztb-allApps-only"><div><div class="ztb-leftCol"><ul class="ztb-ul"><li class="ztb-apps-title">VENTA Y MARKETING</li><li data-zapp="crm" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/crm?src=topbar"><span class="zicon-apps-16 zicon-apps-crm"></span><div class="ztb-app-name">CRM </div></a></li><li data-zapp="campaigns" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/campaigns?src=topbar"><span class="zicon-apps-16 zicon-apps-campaigns"></span><div class="ztb-app-name">Campaigns </div></a></li><li data-zapp="sites" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/sites?src=topbar"><span class="zicon-apps-16 zicon-apps-sites"></span><div class="ztb-app-name">Sites </div></a></li><li data-zapp="survey" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/survey?src=topbar"><span class="zicon-apps-16 zicon-apps-survey"></span><div class="ztb-app-name">Survey </div></a></li><li data-zapp="salesiq" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/salesiq?src=topbar"><span class="zicon-apps-16 zicon-apps-salesiq"></span><div class="ztb-app-name">SalesIQ </div></a></li><li data-zapp="social" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/social?src=topbar"><span class="zicon-apps-16 zicon-apps-social"></span><div class="ztb-app-name">Social </div></a></li><li data-zapp="contactmanager" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/contactmanager?src=topbar"><span class="zicon-apps-16 zicon-apps-contactmanager"></span><div class="ztb-app-name">ContactManager </div></a></li></ul><ul class="ztb-ul" style="margin-top: 33px;"><li class="ztb-apps-title">HELP DESK SOFTWARE </li><li data-zapp="support" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/support?src=topbar"><span class="zicon-apps-16 zicon-apps-support"></span><div class="ztb-app-name">Asistencia</div></a></li><li data-zapp="assist" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/assist?src=topbar"><span class="zicon-apps-16 zicon-apps-assist"></span><div class="ztb-app-name">Assist </div></a></li></ul></div><div class="ztb-centerCol"><ul class="ztb-ul"><li class="ztb-apps-title">BUSINESS PROCESS </li><li data-zapp="creator" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/creator?src=topbar"><span class="zicon-apps-16 zicon-apps-creator"></span><div class="ztb-app-name">Creator </div></a></li><li data-zapp="reports" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/reports?src=topbar"><span class="zicon-apps-16 zicon-apps-reports"></span><div class="ztb-app-name">Reports </div></a></li><li data-zapp="site24x7" class="ztb-products"><a class="ztb-anchor" href="//site24x7.com/home/Welcome.do"><span class="zicon-apps-16 zicon-apps-site24x7"></span><div class="ztb-app-name">Site24x7 </div></a></li></ul><ul class="ztb-ul" style="margin-top: 33px;"><li class="ztb-apps-title">FINANCE</li><li data-zapp="books" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/books?src=topbar"><span class="zicon-apps-16 zicon-apps-books"></span><div class="ztb-app-name">Books </div></a></li><li data-zapp="invoice" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/invoice?src=topbar"><span class="zicon-apps-16 zicon-apps-invoice"></span><div class="ztb-app-name">Invoice </div></a></li><li data-zapp="subscriptions" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/subscriptions?src=topbar"><span class="zicon-apps-16 zicon-apps-subscriptions"></span><div class="ztb-app-name">Subscriptions </div></a></li><li data-zapp="expense" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/expense?src=topbar"><span class="zicon-apps-16 zicon-apps-expense"></span><div class="ztb-app-name">Expense </div></a></li></ul></div><div class="ztb-rightCol"><ul class="ztb-ul"><li class="ztb-apps-title">EMAIL &amp; COLLABORATION</li><li data-zapp="mail" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/mail?src=topbar"><span class="zicon-apps-16 zicon-apps-mail"></span><div class="ztb-app-name">Mail </div></a></li><li data-zapp="docs" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/docs?src=topbar"><span class="zicon-apps-16 zicon-apps-docs"></span><div class="ztb-app-name">Docs </div></a></li><li data-zapp="projects" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/projects?src=topbar"><span class="zicon-apps-16 zicon-apps-projects"></span><div class="ztb-app-name">Projects </div></a></li><li data-zapp="connect" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/connect?src=topbar"><span class="zicon-apps-16 zicon-apps-connect"></span><div class="ztb-app-name">Connect </div></a></li><li data-zapp="bugtracker" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/bugtracker?src=topbar"><span class="zicon-apps-16 zicon-apps-bugtracker"></span><div class="ztb-app-name">BugTracker </div></a></li><li data-zapp="meeting" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/meeting?src=topbar"><span class="zicon-apps-16 zicon-apps-meeting"></span><div class="ztb-app-name">Meeting </div></a></li><li data-zapp="vault" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/vault?src=topbar"><span class="zicon-apps-16 zicon-apps-vault"></span><div class="ztb-app-name">Vault </div></a></li><li data-zapp="showtime" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/showtime?src=topbar"><span class="zicon-apps-16 zicon-apps-showtime"></span><div class="ztb-app-name">ShowTime </div></a></li></ul><ul class="ztb-ul" style="margin-top: 33px;"><li class="ztb-apps-title">HUMAN RESOURCES </li><li data-zapp="people" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/people?src=topbar"><span class="zicon-apps-16 zicon-apps-people"></span><div class="ztb-app-name">People </div></a></li><li data-zapp="recruit" class="ztb-products"><a class="ztb-anchor" href="https://zoho.com/recruit?src=topbar"><span class="zicon-apps-16 zicon-apps-recruit"></span><div class="ztb-app-name">Recruit </div></a></li></ul></div></div></div></div></div><div class="ztb-ztooltip ztb-font-family"><span></span><div></div></div></body></html>

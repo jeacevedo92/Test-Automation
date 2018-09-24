@@ -1,0 +1,127 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><style>
+@font-face {
+font-family: ProximaNovaThin;
+src: url(//fonts.zohostatic.com/proxima/ProximaNova-Thin-webfont.eot);
+src: url(//fonts.zohostatic.com/proxima/ProximaNova-Thin-webfont.eot?#iefix) format('embedded-opentype'), url(//fonts.zohostatic.com/proxima/ProximaNova-Thin-webfont.woff) format('woff'), url(//fonts.zohostatic.com/proxima/ProximaNova-Thin-webfont.ttf) format('truetype'), url(//fonts.zohostatic.com/proxima/ProximaNova-Thin-webfont.svg#ProximaNovaThThin) format('svg');
+font-weight: 400;
+font-style: normal;
+}
+html,
+body {
+height: 100%;
+}
+body {
+background-color: #f3f3f3;
+color: #888;
+font-family: ProximaNovaThin;
+font-size:16px;
+margin: 0;
+position: relative;
+}
+h1 {
+font-size: 30px;
+font-weight: 100;
+line-height: 1.2em;
+margin: 0 0 30px;
+font-family: ProximaNovaThin;
+}
+.text-center {
+text-align: center;
+}
+.container {
+left: 50%;
+position: absolute;
+top: 35%;
+-ms-transform: translate(-50%, -50%); /* IE 9 */
+-webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+transform: translate(-50%, -50%);
+}
+/* PROGRESS */
+.progress {
+background-color: #e5e9eb;
+height: 0.20em;
+position: relative;
+width: 24em;
+}
+.progress-bar {
+background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+background-size: 24em 0.25em;
+height: 100%;
+position: relative;
+-ms-animation:zcrm 7s infinite linear;
+-webkit-animation:zcrm 7s infinite linear;
+-o-animation:zcrm 7s infinite linear;
+animation:zcrm 7s infinite linear;
+}
+.progress-shadow {
+background-image: -webkit-gradient(linear, left top, left bottom, from(#eaecee), to(#f3f3f3));
+background-image: -webkit-linear-gradient(top, #eaecee, #f3f3f3);
+background-image:    -moz-linear-gradient(top, #eaecee, #f3f3f3);
+background-image:      -o-linear-gradient(top, #eaecee, #f3f3f3);
+background-image:         linear-gradient(to bottom, #eaecee, #f3f3f3);
+height: 3em;
+position: absolute;
+top: 100%;
+-webkit-transform: skew(45deg);
+-webkit-transform-origin: 0 0;
+width: 100%;
+}
+/* ANIMATIONS */
+@-webkit-keyframes zcrm {
+0%, 100% {
+transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
+}
+0% {
+width: 0;
+}
+100% {
+width: 100%;
+}
+}
+@-o-keyframes zcrm {
+0%, 100% {
+transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
+}
+0% {
+width: 0;
+}
+100% {
+width: 100%;
+}
+}
+@keyframes zcrm {
+0%, 100% {
+transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
+}
+0% {
+width: 0;
+}
+100% {
+width: 100%;
+}
+}
+</style>
+</head><body><form name="dummyForm" action="/crm/ShowHomePage.do?seotrackcid=675440161" target="_parent" method="POST"><input type="hidden" name="product" value="CRM" /></form><script type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {mode:"sync", widgetcode:"90643b459b1adf9d5c8ba650d8418fb905f989e389e690323db70e8258ee79a1b38c0fc203bea6c01c22393458f46948", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.async=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);if($zoho.hasOwnProperty('salesiq')) { $zoho.livedesk = $zoho.salesiq;}
+$zoho.salesiq.ready = function(embedinfo) {
+$zoho.salesiq.floatbutton.visible("hide"); //No I18N
+}
+try
+{
+var signupType = "DIRECT_SIGN_UP"; //No I18N
+
+$zoho.salesiq.visitor.customaction('{"op":'+signupType+',"e":'+pruebsdfdsfa\x40gmail.com+',"sn":"ZohoCRM","zsoid":'+675440161+'}');                          
+}
+catch(exp){}</script><meta name="viewport" content="width=device-width, initial-scale=1.0" /><style>
+.successbox{border:1px solid #6b90da; background-color:#f5f7fb;	padding:20px 0px; width:650px; margin:50px;	font-family:Arial, Helvetica, sans-serif; font-size:16px;font-weight:bold; text-align:center; line-height:30px; color:#1e4ca7;}
+@media only screen and/*!YUI-Compressor */(min-width : 320px) and/*!YUI-Compressor */(max-width : 568px) {
+.successbox {
+width: 80%;
+margin: 0 auto;
+padding: 20px 20px;
+}
+}
+</style><div class="container"><h1 class="text-center">Cargando...</h1>
+<div class="progress"><div class="progress-bar"><div class="progress-shadow"></div></div></div></div><script>
+document.dummyForm.action="/crm/ShowHomePage.do?seotrackcid="+'675440161';	
+setTimeout(function(){document.dummyForm.submit();}, 5000); 
+</script></body></html>
