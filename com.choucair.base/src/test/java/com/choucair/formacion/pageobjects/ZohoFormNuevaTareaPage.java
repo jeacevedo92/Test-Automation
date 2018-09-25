@@ -3,8 +3,13 @@ package com.choucair.formacion.pageobjects;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertThat;
 
-import org.apache.bcel.generic.Select;
+import javax.xml.xpath.XPath;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
@@ -43,17 +48,39 @@ public class ZohoFormNuevaTareaPage extends PageObject{
 	@FindBy(xpath="//*[@id=\"Crm_Tasks_SEID_label_select\"]")
 	public WebElementFacade cmbCuenta;
 	
+	
+	//estado -------------
+	@FindBy(xpath="//*[@id=\"select2-Crm_Tasks_STATUS-container\"]/span")
+	public WebElementFacade divEstado;
+	
 	//estado 
-	@FindBy(xpath="//*[@id=\"Crm_Tasks_STATUS\"]")
+	@FindBy(id="Crm_Tasks_STATUS")
 	public WebElementFacade cmbEstado;
+	
+	
 	
 	@FindBy(id="Tasks_fldRow_STATUS	")
 	public WebElementFacade lblEstado;
 	
 	
-	//prioridad
+	
+	
+	//prioridad -------------
+	@FindBy(xpath="//*[@id=\"select2-Crm_Tasks_PRIORITY-container\"]/span")
+	public WebElementFacade divPrioridad;
+		
+	//estado 
 	@FindBy(id="Crm_Tasks_PRIORITY")
-	public WebElementFacade cmbPrioridad;	
+	public WebElementFacade cmbPrioridad;
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	//enviar mensaje
 	@FindBy(id="Crm_Tasks_SENDNOTIFICATION")
@@ -87,10 +114,74 @@ public class ZohoFormNuevaTareaPage extends PageObject{
 	public WebElementFacade btnGuardar;
 	
 	
-	//dic prioridad
+	//espacio en  blanco
 	@FindBy(id="secDiv_Task_Information")
-	public WebElementFacade divPrioridad;
+	public WebElementFacade EspacioBlanco;
+	
+	
+	
+	///////////////////////////////////////
+	
+	//Recordatorio
 		
+	
+	//fecha inicio
+	@FindBy(id="Crm_Tasks_RemindAt_Start_Date1")
+	public WebElementFacade txtFechaInicio;
+	
+	
+	//hora
+	
+	@FindBy(xpath="//*[@id=\"Crm_Tasks_RemindAt_Start_Date1_TimeOption\"]")
+	public WebElementFacade txtHora;
+	
+	
+	//tipo 
+	@FindBy(id="Crm_Tasks_RemindAt_period")
+	public WebElementFacade cmbTipo;
+	
+	@FindBy(xpath="//*[@id=\"select2-Crm_Tasks_RemindAt_period-container\"]/span")
+	public WebElementFacade cmbDivTipo;
+	
+	
+	//Notificar
+	@FindBy(xpath="//*[@id=\"Tasks_fldRow_RemindAt_Notify\"]/div[2]/label[2]/span[1]")
+	public WebElementFacade ckbNotificar;
+	
+	
+	
+	//Repetir---------------------
+	//a TIEMPO
+	@FindBy(id="Crm_Tasks_remTime")
+	public WebElementFacade cmbAtiempo;
+	
+	
+	@FindBy(xpath="//*[@id=\"select2-Crm_Tasks_remTime-container\"]/span")
+	public WebElementFacade cmbDivAtiempo;
+	
+	
+	//antes de 
+	@FindBy(id="Crm_Tasks_remTime_TimeOption")
+	public WebElementFacade txtAnteDe;
+	
+	//Fecha inicio	
+	@FindBy(id="Crm_Tasks_Recurring_Start_Date1")
+	public WebElementFacade txtFechaRep;
+	
+	
+	//Fecha final	
+	@FindBy(id="Crm_Tasks_Recurring_End_Date1")
+	public WebElementFacade txtFinRep;
+	
+	//Tipo repetecion
+	@FindBy(id="Crm_Tasks_Recurring_period")
+	public WebElementFacade cmbTipoRep;
+	
+	@FindBy(xpath="//*[@id=\"select2-Crm_Tasks_Recurring_period-container\"]/span")
+	public WebElementFacade cmbDivTipoRep;
+	
+	
+	
 	
 	
 	
@@ -123,41 +214,122 @@ public class ZohoFormNuevaTareaPage extends PageObject{
 	
 	public void Estado(String DatoPrueba) {
 		
-		cmbEstado.selectByValue(DatoPrueba);
+		EspacioBlanco.click();
+		divEstado.click();
+		Select Estado = new Select(cmbEstado);
+		Estado.selectByValue(DatoPrueba);
+		
+		EspacioBlanco.click();
+		
 	}
 	
 	public void Prioridad(String DatoPrueba) {
 		
-		System.out.println(DatoPrueba);
+		EspacioBlanco.click();
+		divPrioridad.click();
+		Select Prioridad = new Select(cmbPrioridad);
+		Prioridad.selectByValue(DatoPrueba);
 		
-		
-		cmbPrioridad.selectByVisibleText(DatoPrueba);
+		EspacioBlanco.click();
 	} 
 	
 	
 	public void SendEmail(String DatoPrueba) {
-		System.out.println(DatoPrueba);
+		
 		if(DatoPrueba.equals("si")) {
-			System.out.println("sisi");
-			CkBSendEmail.click();
-			System.out.println("no");
+			
+			WebDriver driver = this.getDriver();
+            WebElement input = driver.findElement(By.id("Crm_Tasks_SENDNOTIFICATION"));
+            new Actions(driver).moveToElement(input).click().perform();              
+
 		}			
 		
 	}
 	
-	public void Recordatorio(String DatoPrueba) {	
+	public void Recordatorio(String DatoPrueba,String FechaInicio,String Hora,String Tipo,String notificar) {	
 		if(DatoPrueba.equals("si")) {
-			CkBRecordatorio.click();	
+			
+			WebDriver driver = this.getDriver();
+            WebElement input = driver.findElement(By.id("Crm_Tasks_REMINDAT"));
+            new Actions(driver).moveToElement(input).click().perform();
+            
+            
+            //recordatorio;
+            FechaIni(FechaInicio);
+            Hora(Hora);
+            Tipo(Tipo);
+            Notificar(notificar);
+            
 		}
 	}
 	
-	public void Repetir(String DatoPrueba) {		
+	private void Notificar(String notificar) {
+		if (notificar.equals("Ventana")) {
+			ckbNotificar.click();
+		}
+		
+		
+	}
+
+	private void Tipo(String tipo) {
+		cmbDivTipo.click();
+		cmbTipo.selectByVisibleText(tipo);
+		//EspacioBlanco.click();
+		
+	}
+
+	private void Hora(String hora) {
+		txtHora.sendKeys(hora);
+		
+		
+	}
+
+	private void FechaIni(String fechaInicio) {
+		txtFechaInicio.sendKeys(fechaInicio);
+		
+	}
+
+	public void Repetir(String DatoPrueba,String Atiempo,String AntesDe,String FechaInicio,String FechaFin,String TipoRep) {		
 		if(DatoPrueba.equals("si")) {
-			CkBRepetir.click();		
+			
+			WebDriver driver = this.getDriver();
+            WebElement input = driver.findElement(By.id("Crm_Tasks_RECURRING"));
+            new Actions(driver).moveToElement(input).click().perform(); 
+            
+            Atiempo(Atiempo);
+            AntesDe(AntesDe);
+            FechaInicio(FechaInicio);
+            FechaFin(FechaFin);
+            TipoRep(TipoRep);
 		}
 	}
 	
 	
+	private void TipoRep(String TipoRep) {
+		cmbDivTipoRep.click();
+		cmbTipoRep.selectByVisibleText(TipoRep);
+		
+	}
+
+	private void FechaFin(String FechaFin) {
+		txtFinRep.sendKeys(FechaFin);
+	}
+
+	private void FechaInicio(String FechaInicio) {
+		txtFechaRep.sendKeys(FechaInicio);
+		
+	}
+
+	private void AntesDe(String AntesDe) {
+		txtAnteDe.sendKeys(AntesDe);
+	}
+
+	private void Atiempo(String Atiempo) {
+		cmbDivAtiempo.click();
+		cmbAtiempo.selectByVisibleText(Atiempo);
+		
+	}
+
 	public void Descripcion(String DatoPrueba) {
 		txtDescripcion.sendKeys(DatoPrueba);
 	}

@@ -23,10 +23,10 @@ Scenario: Registro
   	Se ingresan los datos requeridos
   	Se validan los datos
   	Se valida la  nueva tarea creada
-	    Given Autentico en colorlib  con usuario "fsdffdfbsiu@gmail.com" y clave "Utp3154439086*"
+	    Given Autentico en colorlib  con usuario "jeacevedo92@gmail.com" y clave "Utp3154439086*"
 	    When Diligencio formulario para nueva tarea
-	    |Asunto      |FechaVencimiento |cmbContacto|Contacto |cmbCuenta|Cuenta     |Estado    |Prioridad|EnviarMensaje|Recordatorio|Repetir|Descripcion           |
-	    |Reunion     |11/09/2018       |Contacto   |Juanito  |Trato    |tratoo     |Completado|Bajo     |no           |no          |no     |Reunion Automatizacion|
+	    |Asunto      |FechaVencimiento |cmbContacto|Contacto |cmbCuenta|Cuenta     |Estado    |Prioridad|EnviarMensaje|Recordatorio|FechaInicio|Hora    |Tipo |notificar|Repetir|Atiempo|AntesDe |FechaInicio|FechaFin  |TipoRep|Descripcion           |
+	    |Reunion     |11/09/2018       |Contacto   |Juanito  |Trato    |tratoo     |Completado|Bajo     |si           |si          |26/09/2018 |08:00 AM|Anual|Ventana  |si     |4 días |08:05 AM|27/09/2018 |30/09/2018|Anual  |Reunion Automatizacion|
 	    Then Verifica nueva tarea
 
 
